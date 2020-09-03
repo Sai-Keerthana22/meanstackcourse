@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    span.psw {
+  float:right;
+  margin: 12px 55px;
+  padding-top: 10px;
+}
+input[type=text], input[type=password] {
+  width: 80%;
+  padding: 12px 18px;
+  margin: 18px 24px;
+  display: inline-block;
+  border: 100px 100px 100px 100px black;
+  border-radius: 5px;
+  box-sizing:content-box;
+}
+    
+    div{
+        background-color: lightgray;
+        width: 500px;
+        border: 10px;
+        border-radius: 20px;
+        box-shadow:0 20px grey;
+        
+    }
+    button {
+      width: 86%;
+      background-color:red;
+      color: white;
+      padding: 12px 18px;
+      margin:8px 24px;
+      border: 20px black;
+      cursor: pointer;
+ 
+}
+    .center{display:block; 
+    margin-left:auto;
+    margin-right:auto;
+    padding-top: 1%;
+    padding-bottom: 5%;
+    width:35%}
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="action_page.php" method="post">
+
+        <div class="center">
+          <p style="text-align: center; font-size: 25px;" >Login</p><hr>
+          <input type="text" placeholder="  Username" name="uname" required><br>
+          <input type="password" placeholder="  Password" name="psw" required><br>
+          <div class="container">
+            <span class="psw"><a href="#">forgot password?</a></span>
+          </div>
+          <button type="submit">SIGNIN</button>
+          
+        </div>
+      
+        
+      </form>
+    </div>    
+
+    
+</body>
+
+</html>
