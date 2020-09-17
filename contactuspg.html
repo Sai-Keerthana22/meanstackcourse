@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box;}
+        
+        input[type=text], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+        }
+        
+        input[type=submit] {
+          background-color: #4CAF50;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+          background-color: #45a049;
+        }
+        
+        .container {
+          border-radius: 5px;
+          background-color: #f2f2f2;
+          padding: 20px;
+        }
+        </style>
+</head>
+<body>
+   
+    <div class="jumbotron bg-warning">
+        <div class="row">
+            <div class="col-12 col-sm-6">
+            <h1 class="display-3">Contact Us</h1>
+            <p class="lead">we are here for you</p>
+            </div>
+            <div class="col-12 col-sm-2">
+            <p><i class="fa fa-phone" aria-hidden="true"></i>+12345678</p></div>
+            <div class="col-12 col-sm-2">
+            <p><i class="fa fa-envelope" aria-hidden="true"></i> bestcars@gmail.com</p></div>
+            <div class="col-12 col-sm-2">
+            <p><i class="fa fa-map-marker" aria-hidden="true"></i>Keer's web design</p></div>
+        </div>        
+        
+    </div>
+    </nav>
+
+<div class="container">
+  <form id="myForm" class="form">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name.." >
+
+    <label for="email">Email</label><br>
+    <input type="email" id="email" name="email" placeholder="Your Email id.."><br>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit" onclick="myFunc()">  </form>
+  <script>
+      
+      function myFunc(){
+        alert("form has been submitted");
+        console.log("your name is "+document.getElementById("name").value);
+        console.log("your mailid  is "+document.getElementById("email").value);
+        console.log("your subject is "+document.getElementById("subject").value);
+
+      }
+       
+
+  </script>
+</div>
+    
+</body>
+</html>
