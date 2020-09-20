@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+        table tr th{
+            border:2px black;
+            border-style: solid;
+            font-style: italic;
+            height: 40px;
+            width: 100px;
+            color: purple;
+            border-color: antiquewhite;
+            text-align: center;
+           
+        }
+        table tr td{
+            border:2px black;
+            border-style: solid;
+            font-style: italic;
+            height: 40px;
+            width: 100px;
+            color: greenyellow;
+            border-color:antiquewhite ;
+            text-align: center;
+           
+        }
+        #mytable{
+            margin-top: 5%;
+            margin-left: 30%;
+        }
+        #myform{
+            text-align: left;
+            margin-left: 28%;
+            padding-top: 20px;
+        }
+        input{
+            border-style: groove;
+            padding: 1%;
+            border-radius: 5px;
+        }
+        body{
+            background-image:url(dynamic.jpg) ;
+            background-position: center;
+            background-size: cover;
+            
+        }
+        label{
+            color: red;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <form id="myform" >
+            <h3 style="color: chartreuse">Enter your requirements for the car</h1>
+                <strong><label style="margin-right: 1%;">Name</label></strong>
+          <input id="A1" placeholder=" enter your name" type="text">
+      <strong><label style="margin-left: 1%;">Brand</label></strong>
+           <input id="A2" placeholder=" enter brand" type="text"><br /><br>
+          <strong>   <label>Budget</label></strong>
+            <input id="A3" placeholder=" enter budget" type="text">
+            <strong><label style="margin-right: 1%;">contact</label></strong>
+            <input id="A4" placeholder="enter your number" type="text">
+          </form>
+          <button style="margin-left: 45%;margin-top: 1%;margin-bottom: 1%; " class="btn btn-info " type="button" onclick="display()">submit</button>
+      </div>
+  
+      <div class="container" >
+          <table id="mytable">
+              <tr>
+                  <th>Name</th>
+                  <th>Brand</th>
+                  <th>budget</th>
+                  <th>contact</th>
+              </tr>
+          </table>
+          
+      </div>
+      <script>
+        document.getElementById("cbait").addEventListener("click",display);
+       
+        var no=1;
+        function display()
+        {
+            
+            var brand=document.getElementById("A1").value;
+            var color=document.getElementById("A2").value;
+            var budget=document.getElementById("A3").value;
+            var gear=document.getElementById("A4").value;
+
+            if(brand==false || color==false || budget==false || gear==false)
+            {
+                 alert("You didn't enter all the details");
+                 return;
+            } 
+            var table=document.getElementById("mytable");
+            var row=table.insertRow(no);
+            var cell1=row.insertCell(0);
+            var cell2=row.insertCell(1);
+            var cell3=row.insertCell(2);
+            var cell4=row.insertCell(3);
+            cell1.innerHTML=brand;
+            cell2.innerHTML=color;
+            cell3.innerHTML=budget;
+            cell4.innerHTML=gear;
+            
+
+           
+
+
+        }
+        no=no+1;
+
+    </script>
+    
+</body>
+</html>
